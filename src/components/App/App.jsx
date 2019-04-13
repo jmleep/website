@@ -16,6 +16,9 @@ const App = () => (
           <Header as="h1" icon textAlign="center">
             <Header.Content>Jordan Leeper</Header.Content>
           </Header>
+          <Header as="h3" textAlign="center">
+            Full Stack Software Engineer
+          </Header>
         </Grid.Column>
       </Grid.Row>
       <Menu />
