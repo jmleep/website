@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Menu } from 'semantic-ui-react';
 import WorkHistory from '../WorkHistory';
 import Projects from '../Projects';
+import Technologies from '../Technologies';
 
-const edu = 'education';
+const tech = 'technology';
 const work = 'workhistory';
 const proj = 'projects';
 const me = 'me';
@@ -14,6 +15,8 @@ const getActiveView = activeTab => {
       return <WorkHistory />;
     case proj:
       return <Projects />;
+    case tech:
+      return <Technologies />;
     default:
       return <WorkHistory />;
   }
@@ -30,8 +33,8 @@ const MenuView = () => {
         <Menu.Item name={work} active={activeTab === work} onClick={() => setActiveTab(work)}>
           Work History
         </Menu.Item>
-        <Menu.Item name={edu} active={activeTab === edu} onClick={() => setActiveTab(edu)}>
-          Education
+        <Menu.Item name={tech} active={activeTab === tech} onClick={() => setActiveTab(tech)}>
+          Technologies
         </Menu.Item>
         <Menu.Item name={me} active={activeTab === me} onClick={() => setActiveTab(me)}>
           About Me
