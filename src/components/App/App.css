@@ -1,10 +1,18 @@
 .app {
-  font-family: 'Raleway', sans-serif;
-  /*background: #2b2c2b;*/
-  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.2rem;
+  color: #000;
   padding-top: 3px;
 }
 
-.ui.header {
-  color: #fff;
+.image {
+  z-index: 2;
+}
+
+.header {
+  color: #000;
+  z-index: 2;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  position: relative;
 }

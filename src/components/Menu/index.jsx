@@ -3,6 +3,7 @@ import { Menu } from 'semantic-ui-react';
 import WorkHistory from '../WorkHistory';
 import Projects from '../Projects';
 import Technologies from '../Technologies';
+import AboutMe from '../AboutMe';
 
 const tech = 'technology';
 const work = 'workhistory';
@@ -17,6 +18,8 @@ const getActiveView = activeTab => {
       return <Projects />;
     case tech:
       return <Technologies />;
+    case me:
+      return <AboutMe />;
     default:
       return <WorkHistory />;
   }

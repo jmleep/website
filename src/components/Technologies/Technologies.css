@@ -1,0 +1,12 @@
+.tech {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.img {
+  padding: 8px;
+}
+
+.img:hover {
+  border: 1px solid black;
+}

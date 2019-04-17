@@ -1,6 +1,6 @@
 /* eslint-disable react/no-did-mount-set-state */
 import React from 'react';
-import { Header, Image } from 'semantic-ui-react';
+import { Image } from 'semantic-ui-react';
 import Canvas from '../Canvas/Canvas';
 import me from '../../static/me.jpg';
 import styles from './App.css';
@@ -31,13 +31,9 @@ class App extends React.Component {
         <div height={300} width={width}>
           <Canvas width={width} height={400} />
 
-          <Image size="medium" src={me} circular centered />
-          <Header as="h1" icon textAlign="center" style={{ fontFamily: 'Ubuntu' }}>
-            <Header.Content>Jordan Leeper</Header.Content>
-          </Header>
-          <Header as="h3" textAlign="center" style={{ fontFamily: 'Ubuntu' }}>
-            Full Stack Software Engineer
-          </Header>
+          <Image size="medium" src={me} circular centered className={styles.image} />
+          <h1 className={styles.header}>Jordan Leeper</h1>
+          <h3 className={styles.header}>Full Stack Software Engineer</h3>
         </div>
         <Menu />
 

@@ -61,14 +61,23 @@ const Canvas = ({ height, width }) => {
 
   return (
     <div>
-      <canvas height={height} width={width} ref={canvasRef} style={{ position: 'absolute' }} />
+      <canvas
+        height={height}
+        width={width}
+        ref={canvasRef}
+        style={{ position: 'absolute', zIndex: 1 }}
+      />
     </div>
   );
 };
 
 Canvas.propTypes = {
   height: PropTypes.number.isRequired,
-  width: PropTypes.number.isRequired
+  width: PropTypes.number
+};
+
+Canvas.defaultProps = {
+  width: null
 };
 
 export default Canvas;

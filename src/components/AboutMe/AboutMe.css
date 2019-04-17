@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+}
+
+.row {
+  padding: 10px 0px 0px 50px;
+  font-size: 1.7rem;
+}
