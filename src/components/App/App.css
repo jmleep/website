@@ -1,0 +1,10 @@
+.app {
+  font-family: 'Raleway', sans-serif;
+  /*background: #2b2c2b;*/
+  color: #fff;
+  padding-top: 3px;
+}
+
+.ui.header {
+  color: #fff;
+}

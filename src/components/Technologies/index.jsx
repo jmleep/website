@@ -12,6 +12,8 @@ import parcel from '../../static/parcel.png';
 import postgres from '../../static/postgres.png';
 import gitlab from '../../static/gitlab.png';
 
+// Add yarn, npm
+
 const Technologies = () => (
   <Grid.Row centered>
     <Card.Group centered>
