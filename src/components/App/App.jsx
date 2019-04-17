@@ -9,17 +9,19 @@ import Menu from '../Menu';
 document.body.style.margin = 0;
 
 class App extends React.Component {
-  state = {
-    width: null
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      width: null
+    };
+    this.widthRef = React.createRef();
+  }
 
   componentDidMount() {
     this.setState({
       width: window.innerWidth
     });
   }
-
-  widthRef = React.createRef();
 
   render() {
     const { width } = this.state;
