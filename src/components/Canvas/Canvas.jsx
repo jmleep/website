@@ -46,15 +46,15 @@ const Canvas = ({ height, width }) => {
       }
 
       for (let i = 0; i <= 10000; i += 1) {
-        if (i % 3 === 0) {
+        if (i % 5 === 0) {
           setTimeout(() => {
             drawPoint(x2[i], y1[i], gc);
-          }, 300 * i);
+          }, 30 * i);
         }
 
         setTimeout(() => {
           drawLine(x1[i], y1[i], x2[i], y2[i], gc);
-        }, 300 * i);
+        }, 30 * i);
       }
     }
   }, [height, width]);
