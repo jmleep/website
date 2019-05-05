@@ -29,7 +29,7 @@ const MenuView = () => {
   const [activeTab, setActiveTab] = useState(proj);
   return (
     <React.Fragment>
-      <Menu fluid widths={4}>
+      <Menu fluid widths={4} style={{ marginTop: '0px' }}>
         <Menu.Item name={proj} active={activeTab === proj} onClick={() => setActiveTab(proj)}>
           Projects
         </Menu.Item>

@@ -28,7 +28,7 @@ class App extends React.Component {
 
     return (
       <div className={styles.app}>
-        <div height={300} width={width}>
+        <div className={styles.headerContainer} height={300} width={width}>
           <Canvas width={width} height={400} />
 
           <Image size="medium" src={me} circular centered className={styles.image} />

@@ -17,13 +17,9 @@ const drawLine = (x1, y1, x2, y2, canvas) => {
   canvas.beginPath();
   canvas.moveTo(x1, y1);
   canvas.lineTo(x2, y2);
-  canvas.strokeStyle = randomColor();
+  canvas.lineWidth = 10;
+  canvas.strokeStyle = '#14398f';
   canvas.stroke();
-};
-
-const drawPoint = (x, y, canvas) => {
-  canvas.fillStyle = randomColor();
-  canvas.fillRect(x, y, 7, 7);
 };
 
 const Canvas = ({ height, width }) => {
@@ -36,25 +32,17 @@ const Canvas = ({ height, width }) => {
       const y1 = [];
       const x2 = [];
       const y2 = [];
-      const colors1 = [];
       for (let i = 0; i <= 10000; i += 1) {
-        x1[i] = Math.floor(Math.random() * (width + 1));
+        x1[i] = Math.floor(Math.random() * width);
         y1[i] = Math.floor(Math.random() * (height + 1));
         x2[i] = Math.floor(Math.random() * (width + 1));
         y2[i] = Math.floor(Math.random() * (height + 1));
-        colors1[i] = 0;
       }
 
       for (let i = 0; i <= 10000; i += 1) {
-        if (i % 5 === 0) {
-          setTimeout(() => {
-            drawPoint(x2[i], y1[i], gc);
-          }, 30 * i);
-        }
-
         setTimeout(() => {
           drawLine(x1[i], y1[i], x2[i], y2[i], gc);
-        }, 30 * i);
+        }, 20 * i);
       }
     }
   }, [height, width]);
@@ -65,7 +53,7 @@ const Canvas = ({ height, width }) => {
         height={height}
         width={width}
         ref={canvasRef}
-        style={{ position: 'absolute', zIndex: 1 }}
+        style={{ position: 'absolute', zIndex: 0 }}
       />
     </div>
   );

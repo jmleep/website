@@ -2,7 +2,6 @@
   font-family: 'Ubuntu', sans-serif;
   font-size: 1.2rem;
   color: #000;
-  background: #14398f;
   padding-top: 3px;
   height: 100vh;
 }
@@ -15,11 +14,16 @@
   z-index: 2;
 }
 
+.headerContainer {
+  padding-bottom: 5px;
+}
+
 .header {
   color: #000;
   z-index: 2;
   font-family: 'Ubuntu', sans-serif;
   text-align: center;
   position: relative;
+  margin-top: 20px;
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
