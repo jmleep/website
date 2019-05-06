@@ -15,6 +15,7 @@ class App extends React.Component {
       width: null
     };
     this.widthRef = React.createRef();
+    this.handleResize = this.handleResize.bind(this);
   }
 
   componentWillMount() {
@@ -31,9 +32,9 @@ class App extends React.Component {
     window.removeEventListener('resize', this.handleResize);
   }
 
-  handleResize = () => {
+  handleResize() {
     this.setState({ width: window.innerWidth });
-  };
+  }
 
   render() {
     const { width } = this.state;
