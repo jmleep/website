@@ -4,15 +4,6 @@ import PropTypes from 'prop-types';
 
 const canvasRef = React.createRef();
 
-const randomColor = () => {
-  const chars = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i += 1) {
-    color += chars[Math.floor(Math.random() * 16)];
-  }
-  return color;
-};
-
 const drawLine = (x1, y1, x2, y2, canvas) => {
   canvas.beginPath();
   canvas.moveTo(x1, y1);
@@ -26,6 +17,7 @@ const Canvas = ({ height, width }) => {
   useEffect(() => {
     const { current } = canvasRef;
     const gc = current.getContext('2d');
+
     gc.clearRect(0, 0, width, height);
     if (width) {
       const x1 = [];
@@ -42,7 +34,7 @@ const Canvas = ({ height, width }) => {
       for (let i = 0; i <= 10000; i += 1) {
         setTimeout(() => {
           drawLine(x1[i], y1[i], x2[i], y2[i], gc);
-        }, 20 * i);
+        }, 10 * i);
       }
     }
   }, [height, width]);

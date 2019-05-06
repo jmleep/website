@@ -17,15 +17,27 @@ class App extends React.Component {
     this.widthRef = React.createRef();
   }
 
+  componentWillMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
   componentDidMount() {
     this.setState({
       width: window.innerWidth
     });
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  handleResize = () => {
+    this.setState({ width: window.innerWidth });
+  };
+
   render() {
     const { width } = this.state;
-
+    console.log(width);
     return (
       <div className={styles.app}>
         <div className={styles.headerContainer} height={300} width={width}>
